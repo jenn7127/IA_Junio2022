@@ -27,8 +27,8 @@ function test(states){
 			return
 		} else if (cont===4){
 			states[0]="B"
-			states[0]="DIRTY"
-			states[0]="DIRTY"
+			states[1]="DIRTY"
+			states[2]="DIRTY"
 		}
 	setTimeout(function(){ test(states); }, 2000);
 	
