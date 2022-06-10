@@ -9,6 +9,7 @@ function reflex_agent(location, state){
 
 function test(states){
 		
+	    document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
       	var location = states[0];		
       	var state = states[0] == "A" ? states[1] : states[2];
       	var action_result = reflex_agent(location, state);
@@ -22,15 +23,16 @@ function test(states){
 		document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
 		cont+=1;	
 
-		if (cont=8){
-			document.getElementById("log").innerHTML+="<br><br>Todos los estados visitados"
-			return
-		} else if (cont=4){
-			states[0]="B"
-			states[0]="DIRTY"
-			states[0]="DIRTY"
-		}
+
 	setTimeout(function(){ test(states); }, 2000);
+	if (cont==8){
+		document.getElementById("log").innerHTML+="<br><br>Todos los estados visitados"
+		return
+	} else if (cont==4){
+		states[0]="B"
+		states[0]="DIRTY"
+		states[0]="DIRTY"
+	}
 }
 
 var cont=0;
