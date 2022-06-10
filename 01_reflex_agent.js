@@ -31,8 +31,10 @@ function test(states){
 			states[1]="DIRTY"
 			states[2]="DIRTY"
 			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
+			document.getElementById("log").innerHTML+="<br>";
 		}else{
 			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
+			document.getElementById("log").innerHTML+="<br>";
 		}
 
 
