@@ -25,10 +25,10 @@ function test(states){
 
 
 	setTimeout(function(){ test(states); }, 2000);
-	if (cont==8){
+	if (cont===8){
 		document.getElementById("log").innerHTML+="<br><br>Todos los estados visitados"
 		return
-	} else if (cont==4){
+	} else if (cont===4){
 		states[0]="B"
 		states[0]="DIRTY"
 		states[0]="DIRTY"
