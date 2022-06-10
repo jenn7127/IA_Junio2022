@@ -30,6 +30,7 @@ function test(states){
 			states[1]="DIRTY"
 			states[2]="DIRTY"
 		}
+		
 	setTimeout(function(){ test(states); }, 2000);
 	
 }
