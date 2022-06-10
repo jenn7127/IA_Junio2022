@@ -20,7 +20,7 @@ function test(states){
       	}
       	else if (action_result == "RIGHT") states[0] = "B";
       	else if (action_result == "LEFT") states[0] = "A";	
-		document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
+		
 		cont+=1;	
 
 		if (cont===8){
@@ -30,8 +30,11 @@ function test(states){
 			states[0]="B"
 			states[1]="DIRTY"
 			states[2]="DIRTY"
+			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
+		}else{
+			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
 		}
-		
+
 
 	setTimeout(function(){ test(states); }, 2000);
 	
