@@ -7,13 +7,19 @@ function reflex_agent(location, state){
    	else if (location=="B") return "LEFT";
 }
 
-function test(states){
-		
 
+
+function test(states){
+		if (cont===0){
+			document.getElementById("log").innerHTML+="<br>Location: ".concat(states[0]).concat(" | Action: Initial state");
+			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
+			document.getElementById("log").innerHTML+="<br>";
+		}
+		
       	var location = states[0];		
       	var state = states[0] == "A" ? states[1] : states[2];
       	var action_result = reflex_agent(location, state);
-      	document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
+      
       	if (action_result == "CLEAN"){
         	if (location == "A") states[1] = "CLEAN";
          	else if (location == "B") states[2] = "CLEAN";
@@ -24,15 +30,17 @@ function test(states){
 		cont+=1;	
 
 		if (cont===8){
-			document.getElementById("log").innerHTML+="<br><br>Todos los estados visitados"
+			document.getElementById("log").innerHTML+="<br><br>All states were visited"
 			return
 		} else if (cont===4){
+			document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
 			states[0]="B"
 			states[1]="DIRTY"
 			states[2]="DIRTY"
 			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
 			document.getElementById("log").innerHTML+="<br>";
 		}else{
+			document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
 			document.getElementById("log").innerHTML+="<br>State A: ".concat(states[1]).concat(" | State B: ").concat(states[2]);
 			document.getElementById("log").innerHTML+="<br>";
 		}
