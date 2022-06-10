@@ -9,7 +9,6 @@ function reflex_agent(location, state){
 
 function test(states){
 		
-
       	var location = states[0];		
       	var state = states[0] == "A" ? states[1] : states[2];
       	var action_result = reflex_agent(location, state);
