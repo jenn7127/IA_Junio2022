@@ -25,11 +25,16 @@ function test(states){
 
 
 	setTimeout(function(){ test(states); }, 2000);
-
+	if (cont===8){
+		document.getElementById("log").innerHTML+="<br><br>Todos los estados visitados"
+		return
+	} else if (cont===4){
+		states[0]="B"
+		states[0]="DIRTY"
+		states[0]="DIRTY"
+	}
 }
 
 var cont=0;
 var states = ["A","DIRTY","DIRTY"];
-var state1 = ["A","DIRTY","DIRTY"];
-var state2 = ["B","DIRTY","DIRTY"];
 test(states);
